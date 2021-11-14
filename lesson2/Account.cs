@@ -8,9 +8,21 @@ namespace lesson2
     {
         int _number;
 
+        static int counter = 1;
+
         decimal _balance;
 
         TypeOfBankAccount _typeAccount;
+
+        public Account()
+        {
+            _number = Increase();
+        }
+
+        int Increase()
+        {
+            return counter++;
+        }
 
         public int InfoNumber()
         {

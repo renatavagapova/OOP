@@ -8,17 +8,17 @@ namespace lesson2
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
+            Account account1 = new Account();
+            Account account2 = new Account();
+            Account account3 = new Account();
 
-            Account account = new Account();
+            account1.FillTypeAccount(TypeOfBankAccount.DEBIT);
 
-            account.FillTypeAccount(TypeOfBankAccount.DEBIT);
+            account1.FillBalance(100000);
 
-            account.FillNumber(random.Next(1, 99999999));
-
-            account.FillBalance(100000);
-
-            account.FullInfo();
+            account1.FullInfo();
+            account2.FullInfo();
+            account3.FullInfo();
         }
     }
 }
