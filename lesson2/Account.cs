@@ -135,5 +135,27 @@ namespace lesson2
 
             }
         }
+
+        /// <summary>
+        /// Перевод денег
+        /// </summary>
+        /// <param name="moneyFrom">Ссылка на объект класса банковский счет откуда снимаются деньги</param>
+        /// <param name="take">Сумма снятия</param>
+        public void MoneyTransfer(Account moneyFrom, decimal take)
+        {
+            if (moneyFrom._balance > take)
+            {
+                _balance = _balance + take;
+                moneyFrom._balance = moneyFrom._balance - take;
+                Console.WriteLine($"На счёт: {_number}; Зачислена сумма {take}; Остаток: {_balance};");
+                Console.WriteLine($"Со счёта: {moneyFrom._number}; Списана сумма: {take}; Остаток: {moneyFrom._balance};");
+
+            }
+            else
+            {
+                Console.WriteLine($"Недостаточно средств на счёте: {moneyFrom._number}, для списания суммы: {take}");
+
+            }
+        }
     }
 }

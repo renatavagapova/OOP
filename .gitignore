@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/lesson3.3/lesson3.3.csproj
+/lesson3/lesson3.2.csproj
+/lesson3.3/Program.cs
+/lesson3/Program.cs
